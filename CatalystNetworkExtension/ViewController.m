@@ -118,6 +118,9 @@
     }];
 }
 
+// The following error printed in the logs is due to UIKit and can be ignored:
+// invalid mode 'kCFRunLoopCommonModes' provided to CFRunLoopRunSpecific - break on _CFRunLoopError_RunCalledWithInvalidMode to debug. This message will only appear once per execution.
+
 - (IBAction)toggle:(UISwitch *)sender {
 
     NETunnelProviderSession *connection = (NETunnelProviderSession*)self.manager.connection;
