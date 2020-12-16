@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,47 @@
 		5243B7E5258A85BD00D675F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5243B7E4258A85BD00D675F8 /* Assets.xcassets */; };
 		5243B7E8258A85BD00D675F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5243B7E6258A85BD00D675F8 /* LaunchScreen.storyboard */; };
 		5243B7EB258A85BD00D675F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5243B7EA258A85BD00D675F8 /* main.m */; };
+		5243B801258ABA1200D675F8 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243B800258ABA1200D675F8 /* NetworkExtension.framework */; };
+		5243B805258ABA1200D675F8 /* PacketTunnelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5243B804258ABA1200D675F8 /* PacketTunnelProvider.m */; };
+		5243B80A258ABA1200D675F8 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5243B7FE258ABA1200D675F8 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5243B812258ABA5B00D675F8 /* PsiphonTunnel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243B811258ABA5B00D675F8 /* PsiphonTunnel.xcframework */; };
+		5243B813258ABA5B00D675F8 /* PsiphonTunnel.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5243B811258ABA5B00D675F8 /* PsiphonTunnel.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5243B808258ABA1200D675F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243B7CD258A85BC00D675F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5243B7FD258ABA1200D675F8;
+			remoteInfo = PacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5243B80E258ABA1200D675F8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5243B80A258ABA1200D675F8 /* PacketTunnel.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5243B814258ABA5B00D675F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5243B813258ABA5B00D675F8 /* PsiphonTunnel.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5243B7D5258A85BC00D675F8 /* CatalystNetworkExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalystNetworkExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +69,14 @@
 		5243B7E7258A85BD00D675F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5243B7E9258A85BD00D675F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5243B7EA258A85BD00D675F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5243B7F2258A85D800D675F8 /* CatalystNetworkExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatalystNetworkExtension.entitlements; sourceTree = "<group>"; };
+		5243B7FE258ABA1200D675F8 /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5243B800258ABA1200D675F8 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		5243B803258ABA1200D675F8 /* PacketTunnelProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketTunnelProvider.h; sourceTree = "<group>"; };
+		5243B804258ABA1200D675F8 /* PacketTunnelProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacketTunnelProvider.m; sourceTree = "<group>"; };
+		5243B806258ABA1200D675F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5243B807258ABA1200D675F8 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		5243B811258ABA5B00D675F8 /* PsiphonTunnel.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PsiphonTunnel.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +87,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5243B7FB258ABA1200D675F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5243B801258ABA1200D675F8 /* NetworkExtension.framework in Frameworks */,
+				5243B812258ABA5B00D675F8 /* PsiphonTunnel.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				5243B7D7258A85BC00D675F8 /* CatalystNetworkExtension */,
+				5243B802258ABA1200D675F8 /* PacketTunnel */,
+				5243B7FF258ABA1200D675F8 /* Frameworks */,
 				5243B7D6258A85BC00D675F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5243B7D5258A85BC00D675F8 /* CatalystNetworkExtension.app */,
+				5243B7FE258ABA1200D675F8 /* PacketTunnel.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +121,7 @@
 		5243B7D7258A85BC00D675F8 /* CatalystNetworkExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5243B7F2258A85D800D675F8 /* CatalystNetworkExtension.entitlements */,
 				5243B7D8258A85BC00D675F8 /* AppDelegate.h */,
 				5243B7D9258A85BC00D675F8 /* AppDelegate.m */,
 				5243B7DB258A85BC00D675F8 /* SceneDelegate.h */,
@@ -76,6 +137,26 @@
 			path = CatalystNetworkExtension;
 			sourceTree = "<group>";
 		};
+		5243B7FF258ABA1200D675F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5243B811258ABA5B00D675F8 /* PsiphonTunnel.xcframework */,
+				5243B800258ABA1200D675F8 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5243B802258ABA1200D675F8 /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				5243B803258ABA1200D675F8 /* PacketTunnelProvider.h */,
+				5243B804258ABA1200D675F8 /* PacketTunnelProvider.m */,
+				5243B806258ABA1200D675F8 /* Info.plist */,
+				5243B807258ABA1200D675F8 /* PacketTunnel.entitlements */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,15 +167,35 @@
 				5243B7D1258A85BC00D675F8 /* Sources */,
 				5243B7D2258A85BC00D675F8 /* Frameworks */,
 				5243B7D3258A85BC00D675F8 /* Resources */,
+				5243B80E258ABA1200D675F8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5243B809258ABA1200D675F8 /* PBXTargetDependency */,
 			);
 			name = CatalystNetworkExtension;
 			productName = CatalystNetworkExtension;
 			productReference = 5243B7D5258A85BC00D675F8 /* CatalystNetworkExtension.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5243B7FD258ABA1200D675F8 /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5243B80B258ABA1200D675F8 /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				5243B7FA258ABA1200D675F8 /* Sources */,
+				5243B7FB258ABA1200D675F8 /* Frameworks */,
+				5243B7FC258ABA1200D675F8 /* Resources */,
+				5243B814258ABA5B00D675F8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			productName = PacketTunnel;
+			productReference = 5243B7FE258ABA1200D675F8 /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,6 +206,9 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					5243B7D4258A85BC00D675F8 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					5243B7FD258ABA1200D675F8 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -123,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				5243B7D4258A85BC00D675F8 /* CatalystNetworkExtension */,
+				5243B7FD258ABA1200D675F8 /* PacketTunnel */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +240,13 @@
 				5243B7E8258A85BD00D675F8 /* LaunchScreen.storyboard in Resources */,
 				5243B7E5258A85BD00D675F8 /* Assets.xcassets in Resources */,
 				5243B7E3258A85BC00D675F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5243B7FC258ABA1200D675F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +264,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5243B7FA258ABA1200D675F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5243B805258ABA1200D675F8 /* PacketTunnelProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5243B809258ABA1200D675F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5243B7FD258ABA1200D675F8 /* PacketTunnel */;
+			targetProxy = 5243B808258ABA1200D675F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5243B7E1258A85BC00D675F8 /* Main.storyboard */ = {
@@ -291,15 +419,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CatalystNetworkExtension/CatalystNetworkExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q6HLNEX92A;
 				INFOPLIST_FILE = CatalystNetworkExtension/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.psiphon.CatalystNetworkExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,15 +440,58 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CatalystNetworkExtension/CatalystNetworkExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q6HLNEX92A;
 				INFOPLIST_FILE = CatalystNetworkExtension/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.psiphon.CatalystNetworkExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5243B80C258ABA1200D675F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.psiphon.CatalystNetworkExtension.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5243B80D258ABA1200D675F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.psiphon.CatalystNetworkExtension.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -339,6 +513,15 @@
 			buildConfigurations = (
 				5243B7EF258A85BD00D675F8 /* Debug */,
 				5243B7F0258A85BD00D675F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5243B80B258ABA1200D675F8 /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5243B80C258ABA1200D675F8 /* Debug */,
+				5243B80D258ABA1200D675F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

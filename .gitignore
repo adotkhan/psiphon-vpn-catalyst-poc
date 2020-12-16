@@ -1,0 +1,63 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj
+_test
+
+# Swift build folder
+.build
+
+# Dev Swift projects
+AppStateParser.xcodeproj
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
+
+.DS_Store
+
+xcuserdata
+framework
+go-ios-build
+*.xcworkspace
+
+# Build Automation
+CipherShare
+psi_export_doc.log
+
+# Cocoapods
+Pods
+
+# Intellij IDE
+.idea
+
+# itmsp packages
+*.itmsp
+
+# python bytecode files
+*.pyc
+
+# fastlane screenshots
+screenshots
+report.xml
+Preview.html
+
+psiphon_config
+embedded_server_entries
+Bourbon-Oblique.otf
+transifex_conf.json
