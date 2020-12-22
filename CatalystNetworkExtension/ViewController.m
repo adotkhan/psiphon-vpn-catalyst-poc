@@ -36,8 +36,6 @@
 
         } else if (managers.count > 1) {
             [NSException raise:@"Invalid" format:@"More than 1 config found"];
-        } else {
-            [self createAndSaveNewVPNConfig];
         }
 
     }];
@@ -147,5 +145,19 @@
 
 
 }
+
+- (IBAction)onUninstallVPNConfig:(id)sender {
+    [self.manager removeFromPreferencesWithCompletionHandler:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"ERROR Uninstall vpn config: %@", error);
+            return;
+        }
+    }];
+}
+
+- (IBAction)onInstallVPNConfig:(id)sender {
+    [self createAndSaveNewVPNConfig];
+}
+
 
 @end
