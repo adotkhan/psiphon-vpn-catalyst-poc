@@ -45,7 +45,8 @@
 - (void)createAndSaveNewVPNConfig {
 
     NETunnelProviderProtocol *provider = [[NETunnelProviderProtocol alloc] init];
-    provider.providerBundleIdentifier = @"ca.psiphon.CatalystNetworkExtension.PacketTunnel";
+//    provider.providerBundleIdentifier = @"ca.psiphon.CatalystNetworkExtension.PacketTunnel";
+    provider.providerBundleIdentifier = @"ca.psiphon.CatalystNetworkExtension.MacNE";
     provider.serverAddress = @"localhost";
 
     self.manager = [[NETunnelProviderManager alloc] init];

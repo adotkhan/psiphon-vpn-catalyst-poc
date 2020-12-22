@@ -16,13 +16,23 @@
 		5243B7EB258A85BD00D675F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5243B7EA258A85BD00D675F8 /* main.m */; };
 		5243B801258ABA1200D675F8 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243B800258ABA1200D675F8 /* NetworkExtension.framework */; };
 		5243B805258ABA1200D675F8 /* PacketTunnelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5243B804258ABA1200D675F8 /* PacketTunnelProvider.m */; };
-		5243B80A258ABA1200D675F8 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5243B7FE258ABA1200D675F8 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5243B812258ABA5B00D675F8 /* PsiphonTunnel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243B811258ABA5B00D675F8 /* PsiphonTunnel.xcframework */; };
 		5243B813258ABA5B00D675F8 /* PsiphonTunnel.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5243B811258ABA5B00D675F8 /* PsiphonTunnel.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52F422FC25929B33006B3B75 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5243B800258ABA1200D675F8 /* NetworkExtension.framework */; platformFilter = maccatalyst; };
+		52F4230025929B33006B3B75 /* PacketTunnelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F422FF25929B33006B3B75 /* PacketTunnelProvider.m */; };
+		52F4230A25929B44006B3B75 /* MacNE.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52F422FB25929B33006B3B75 /* MacNE.appex */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52F4231025929B51006B3B75 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5243B7FE258ABA1200D675F8 /* PacketTunnel.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5243B808258ABA1200D675F8 /* PBXContainerItemProxy */ = {
+		52F4230B25929B44006B3B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5243B7CD258A85BC00D675F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52F422FA25929B33006B3B75;
+			remoteInfo = MacNE;
+		};
+		52F4231125929B51006B3B75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5243B7CD258A85BC00D675F8 /* Project object */;
 			proxyType = 1;
@@ -32,17 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5243B80E258ABA1200D675F8 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				5243B80A258ABA1200D675F8 /* PacketTunnel.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5243B814258ABA5B00D675F8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +51,18 @@
 				5243B813258ABA5B00D675F8 /* PsiphonTunnel.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F4230D25929B44006B3B75 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52F4231025929B51006B3B75 /* PacketTunnel.appex in Embed App Extensions */,
+				52F4230A25929B44006B3B75 /* MacNE.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -77,6 +88,11 @@
 		5243B806258ABA1200D675F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5243B807258ABA1200D675F8 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
 		5243B811258ABA5B00D675F8 /* PsiphonTunnel.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PsiphonTunnel.xcframework; sourceTree = "<group>"; };
+		52F422FB25929B33006B3B75 /* MacNE.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MacNE.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F422FE25929B33006B3B75 /* PacketTunnelProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketTunnelProvider.h; sourceTree = "<group>"; };
+		52F422FF25929B33006B3B75 /* PacketTunnelProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacketTunnelProvider.m; sourceTree = "<group>"; };
+		52F4230125929B33006B3B75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52F4230225929B34006B3B75 /* MacNE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacNE.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +112,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52F422F825929B33006B3B75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F422FC25929B33006B3B75 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,6 +128,7 @@
 			children = (
 				5243B7D7258A85BC00D675F8 /* CatalystNetworkExtension */,
 				5243B802258ABA1200D675F8 /* PacketTunnel */,
+				52F422FD25929B33006B3B75 /* MacNE */,
 				5243B7FF258ABA1200D675F8 /* Frameworks */,
 				5243B7D6258A85BC00D675F8 /* Products */,
 			);
@@ -114,6 +139,7 @@
 			children = (
 				5243B7D5258A85BC00D675F8 /* CatalystNetworkExtension.app */,
 				5243B7FE258ABA1200D675F8 /* PacketTunnel.appex */,
+				52F422FB25929B33006B3B75 /* MacNE.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +183,17 @@
 			path = PacketTunnel;
 			sourceTree = "<group>";
 		};
+		52F422FD25929B33006B3B75 /* MacNE */ = {
+			isa = PBXGroup;
+			children = (
+				52F422FE25929B33006B3B75 /* PacketTunnelProvider.h */,
+				52F422FF25929B33006B3B75 /* PacketTunnelProvider.m */,
+				52F4230125929B33006B3B75 /* Info.plist */,
+				52F4230225929B34006B3B75 /* MacNE.entitlements */,
+			);
+			path = MacNE;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,12 +204,13 @@
 				5243B7D1258A85BC00D675F8 /* Sources */,
 				5243B7D2258A85BC00D675F8 /* Frameworks */,
 				5243B7D3258A85BC00D675F8 /* Resources */,
-				5243B80E258ABA1200D675F8 /* Embed App Extensions */,
+				52F4230D25929B44006B3B75 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5243B809258ABA1200D675F8 /* PBXTargetDependency */,
+				52F4230C25929B44006B3B75 /* PBXTargetDependency */,
+				52F4231225929B51006B3B75 /* PBXTargetDependency */,
 			);
 			name = CatalystNetworkExtension;
 			productName = CatalystNetworkExtension;
@@ -197,6 +235,23 @@
 			productReference = 5243B7FE258ABA1200D675F8 /* PacketTunnel.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		52F422FA25929B33006B3B75 /* MacNE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52F4230525929B34006B3B75 /* Build configuration list for PBXNativeTarget "MacNE" */;
+			buildPhases = (
+				52F422F725929B33006B3B75 /* Sources */,
+				52F422F825929B33006B3B75 /* Frameworks */,
+				52F422F925929B33006B3B75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacNE;
+			productName = MacNE;
+			productReference = 52F422FB25929B33006B3B75 /* MacNE.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,6 +264,9 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					5243B7FD258ABA1200D675F8 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					52F422FA25929B33006B3B75 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -228,6 +286,7 @@
 			targets = (
 				5243B7D4258A85BC00D675F8 /* CatalystNetworkExtension */,
 				5243B7FD258ABA1200D675F8 /* PacketTunnel */,
+				52F422FA25929B33006B3B75 /* MacNE */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +303,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5243B7FC258ABA1200D675F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F422F925929B33006B3B75 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,13 +338,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52F422F725929B33006B3B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F4230025929B33006B3B75 /* PacketTunnelProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5243B809258ABA1200D675F8 /* PBXTargetDependency */ = {
+		52F4230C25929B44006B3B75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = maccatalyst;
+			target = 52F422FA25929B33006B3B75 /* MacNE */;
+			targetProxy = 52F4230B25929B44006B3B75 /* PBXContainerItemProxy */;
+		};
+		52F4231225929B51006B3B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 5243B7FD258ABA1200D675F8 /* PacketTunnel */;
-			targetProxy = 5243B808258ABA1200D675F8 /* PBXContainerItemProxy */;
+			targetProxy = 52F4231125929B51006B3B75 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -496,6 +577,50 @@
 			};
 			name = Release;
 		};
+		52F4230325929B34006B3B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MacNE/MacNE.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = MacNE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.psiphon.CatalystNetworkExtension.MacNE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = Debug;
+		};
+		52F4230425929B34006B3B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MacNE/MacNE.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = MacNE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.psiphon.CatalystNetworkExtension.MacNE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -522,6 +647,15 @@
 			buildConfigurations = (
 				5243B80C258ABA1200D675F8 /* Debug */,
 				5243B80D258ABA1200D675F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52F4230525929B34006B3B75 /* Build configuration list for PBXNativeTarget "MacNE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F4230325929B34006B3B75 /* Debug */,
+				52F4230425929B34006B3B75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
